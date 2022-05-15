@@ -31,3 +31,4 @@ dqn.py를 만들어서 슈팅게임을 학습했습니다. 해당 파일과 Epis
 <h2> 결과 영상 </h2>
 추후 올리겠습니다.
 
+<img width="80%" src="https://github.com/dIronmanb/Baram_making-RL_mini_shooting_game/tree/main/video/video.gif">
