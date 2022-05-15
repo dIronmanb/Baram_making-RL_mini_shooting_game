@@ -17,6 +17,7 @@ class Menu():
             self.cursor = min(1, self.cursor + 1)
 
         if pyxel.btnp(pyxel.KEY_Z, 10, 10):
+            # print("Pressing KEY_Z!") #현재 menu에서 Mission Select를 눌렀을 때
             if self.cursor == 0:
                 return Scene.MISSION_SELECT, 1
             elif self.cursor == 1:

@@ -1,2 +1,9 @@
-venv
-.idea
+*.ipynb
+*.pyc
+*.txt
+
+
+checkpoint
+
+/__pycache__
+/Weights

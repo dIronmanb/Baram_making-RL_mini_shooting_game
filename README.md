@@ -1,20 +1,33 @@
-# mini_shooting
-全20ミッションの弾幕シューティングゲーム
+<h1> 소개 </h1>
+    강화학습 알고리즘인 DQN을 사용하여 슈팅 게임을 학습했습니다.
 
-![pyxel-190118-160639](https://user-images.githubusercontent.com/25942568/51371343-394fd900-1b3d-11e9-8bab-612840a8085f.png)
-![pyxel-190118-161851](https://user-images.githubusercontent.com/25942568/51371342-394fd900-1b3d-11e9-9540-3cb512b093a4.png)
-![pyxel-190118-160843](https://user-images.githubusercontent.com/25942568/51371332-381eac00-1b3d-11e9-88da-49d1492f587a.png)
-![pyxel-190118-162505](https://user-images.githubusercontent.com/25942568/51371489-a1062400-1b3d-11e9-855b-fcd577fd1e80.png)
+<br>
 
-## 準備
-`pip install pyxel==1.1.1`  
+<h2> 소스코드 </h2>
+출처: https://github.com/5h00T/mini_shooting.git
 
-## 実行
-`python main.py`
+<br>
 
-## 操作方法
-移動:矢印キー  
-低速移動:左Shift  
-ショット:Z  
-中断:Q  
-Pyxelの特殊操作各種も使えます
+<h2> 키보드 입력 정보 </h2>
+
+상하좌우 화살표: 이동
+
+Z: 메뉴 선택, 공격
+
+1: 학습 자동화 여부
+
+X: 메인 화면으로
+
+Q: 게임 종료
+
+<br>
+
+<h2> DQN알고리즘 </h2>
+
+dqn.py를 만들어서 슈팅게임을 학습했습니다. 해당 파일과 Episodes.py의 가중치 파일을 수정하여 레이어의 파라미터 개수를 바꾸거나, load 및 save가 가능합니다. 
+
+<br>    
+
+<h2> 결과 영상 </h2>
+추후 올리겠습니다.
+

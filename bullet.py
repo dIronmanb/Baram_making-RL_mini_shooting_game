@@ -2,9 +2,11 @@ import pyxel
 import math
 
 
-COLLISION_RADIUS_RATE = 0.3  # 見た目から当たり判定がどのぐらい小さいか
+COLLISION_RADIUS_RATE = 0.3  # 외형 당 판정이 얼마나 작은 지...? 한 번 숫자 바꾸어보기: (0,1)사이에서
 
-class Bullet():
+
+
+class Bullet(): # 에이전트가 쏘는 총알
 
     def __init__(self, radius, x, y, movement_x, movement_y, speed, color):
         self.x = x
@@ -22,11 +24,11 @@ class Bullet():
     def update(self):
         if self.is_active:
             self.count += 1
-            # 移動
+            # 이동
             self.x += self.movement_x * self.speed
             self.y += self.movement_y * self.speed
 
-            # 移動用の関数が設定されていた場合実行
+            # 이동에 대한 함수가 설정되어 있지 않으면 실행
             for move_function in self.move_functions:
                 if move_function is not None:
                     try:
@@ -34,7 +36,7 @@ class Bullet():
                     except StopIteration:
                         self.move_functions.remove(move_function)
 
-        # 画面外に出たら非アクティブ化
+        # 탄막이 화면 밖으로 나오면 해당 탄막 비활성화
         if self.x < 0 or self.x > pyxel.width or self.y < 0 or self.y > pyxel.height:
             self.count = 0
             self.move_functions.clear()
@@ -42,15 +44,15 @@ class Bullet():
 
     def draw(self):
         """
-        自身の描写
+        화면 describe
         """
         if self.is_active:
             pyxel.circ(self.x, self.y, self.radius, self.color)
 
 
-class EnemyBullet(Bullet):
+class EnemyBullet(Bullet): # boss가 쏘는 총알
 
-    def __init__(self, radius, x, y, movement_x, movement_y, speed, color):
+    def __init__(self, radius, x, y, movement_x, movement_y, speed, color): #(탄막 반경, px,py, vx?, vy?, speed?, 색깔)
         super().__init__(radius, x, y, movement_x, movement_y, speed, color)
 
     def update(self):
