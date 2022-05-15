@@ -29,6 +29,8 @@ dqn.py를 만들어서 슈팅게임을 학습했습니다. 해당 파일과 Epis
 <br>    
 
 <h2> 결과 영상 </h2>
-추후 올리겠습니다.
+<img width="80%" style ="width:250px" src = "https://github.com/dIronmanb/Baram_making-RL_mini_shooting_game/blob/main/video/video.gif">
 
-<img width="80%" src="https://github.com/dIronmanb/Baram_making-RL_mini_shooting_game/blob/main/video/video.gif">
+
+<!-- style="width:100px; height:100px;
+<!--src="https://github.com/dIronmanb/Baram_making-RL_mini_shooting_game/blob/main/video/video.gif">
